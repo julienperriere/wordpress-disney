@@ -38,6 +38,8 @@ define('DB_CHARSET', 'utf8');
   */
 define('DB_COLLATE', '');
 
+define('WP_POST_REVISIONS', false ); 
+
 /**#@+
  * Clefs uniques d'authentification et salage.
  *

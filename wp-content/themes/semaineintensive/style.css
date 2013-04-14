@@ -1,4 +1,8 @@
 /**************************************************
+	STYLE
+**************************************************/
+
+/**************************************************
 Theme Name: Semaine intensive WordPress
 Theme URI: http://localhost:8888/disney/
 Author: HETIC H2 P2016 - Equipe 04
@@ -10,9 +14,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: disney, clean, facelift
 **************************************************/
 
-
 /*
-  Reset CSS (by Eric Meyer)
+  Reset CSS
 **************************************************/
 
 html, body, div, span, applet, object, iframe,
@@ -28,39 +31,416 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-  display: block;
+	display: block;
 }
 
 body {
-  line-height: 1;
+	line-height: 1;
 }
 
 ol, ul {
-  list-style: none;
+	list-style: none;
 }
 
 blockquote, q {
-  quotes: none;
+	quotes: none;
 }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none;
+	content: '';
+	content: none;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
+
+/*
+  Web fonts
+**************************************************/
+
+/* Futura Std Bold */
+@font-face {
+	font-family: 'Futura Std Bold';	
+	src: url('fonts/Futura-Std/FuturaStd-Bold.eot');
+	src: url('fonts/Futura-Std/FuturaStd-Bold.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/Futura-Std/FuturaStd-Bold.woff') format('woff'),
+	     url('fonts/Futura-Std/FuturaStd-Bold.ttf') format('truetype'),
+	     url('fonts/Futura-Std/FuturaStd-Bold.svg') format('svg');
+}
+
+/* Futura Std Book */
+@font-face {
+	font-family: 'Futura Std Book';
+	src: url('fonts/Futura-Std/FuturaStd-Book.eot');
+	src: url('fonts/Futura-Std/FuturaStd-Book.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/Futura-Std/FuturaStd-Book.woff') format('woff'),
+	     url('fonts/Futura-Std/FuturaStd-Book.ttf') format('truetype'),
+	     url('fonts/Futura-Std/FuturaStd-Book.svg') format('svg');
+}
+
+/* Futura Std Heavy */
+@font-face {
+	font-family: 'Futura Std Heavy';
+	src: url('fonts/Futura-Std/FuturaStd-Heavy.eot');
+	src: url('fonts/Futura-Std/FuturaStd-Heavy.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/Futura-Std/FuturaStd-Heavy.woff') format('woff'),
+	     url('fonts/Futura-Std/FuturaStd-Heavy.ttf') format('truetype'),
+	     url('fonts/Futura-Std/FuturaStd-Heavy.svg') format('svg');
+}
+
+/* Futura Std Light */
+@font-face {
+	font-family: 'Futura Std Light';
+	src: url('fonts/Futura-Std/FuturaStd-Light.eot');
+	src: url('fonts/Futura-Std/FuturaStd-Light.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/Futura-Std/FuturaStd-Light.woff') format('woff'),
+	     url('fonts/Futura-Std/FuturaStd-Light.ttf') format('truetype'),
+	     url('fonts/Futura-Std/FuturaStd-Light.svg') format('svg');
+}
+
+/* Futura Std Medium */
+@font-face {
+	font-family: 'Futura Std Medium';
+	src: url('fonts/Futura-Std/FuturaStd-Medium.eot');
+	src: url('fonts/Futura-Std/FuturaStd-Medium.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/Futura-Std/FuturaStd-Medium.woff') format('woff'),
+	     url('fonts/Futura-Std/FuturaStd-Medium.ttf') format('truetype'),
+	     url('fonts/Futura-Std/FuturaStd-Medium.svg') format('svg');
+}
+
+
+/*
+  IE patches
+**************************************************/
+
+*:first-child + html .group,
+*:first-child + html ul.tabs,
+*:first-child + html h3.tab {
+	min-height: 1px;
+}
+
+*:first-child + html #add fieldset#upload input {
+ 	border: 1px solid #ddd;
+ 	background: #fff;
+}
+
+
+/*
+  Master styles
+**************************************************/
+
+/* All */
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+/* Self-clear floats */
+.group:after {
+	content: '';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* Body */
+html {
+	height: 100%;
+	overflow-y: auto;
+}
+
+	body {
+		background: #111 url('images/bg.jpg');
+		font: 16px 'Futura Std Medium', Helvetica, sans-serif;
+		color: #fff;
+		overflow-y: auto;
+		-webkit-font-smoothing: antialiased;
+	}
+	
+		.wrapper {
+		    margin: 0 auto;
+		    width: 960px;
+		}
+
+
+/*
+  Typography
+**************************************************/
+
+/* Links */
+a, a:link, a:visited {
+	outline: none;
+	text-decoration: none;
+}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+
+/*
+  Header
+**************************************************/
+
+/* General header */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	border-top: 1px solid #222;
+	border-bottom: 1px solid #1a1a1a;
+    background-color: #111; 
+    background-image: url('images/mainNav.jpg') top repeat-x; 
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#333), to(#111));
+    background-image: -webkit-linear-gradient(top, #333, #111); 
+    background-image:    -moz-linear-gradient(top, #333, #111);
+    background-image:     -ms-linear-gradient(top, #333, #111);
+    background-image:      -o-linear-gradient(top, #333, #111);
+    background-image:         linear-gradient(top, #333, #111);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.8);
+       -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.8);
+        -ms-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.8);
+         -o-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.8);
+	        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+	/* Header navigation */
+	#mainSections {
+		float: left;
+	    font: normal 14px 'Futura Std Heavy', Helvetica, sans-serif;
+	    line-height: 14px;
+	    text-transform: uppercase;
+	    text-align: center;	
+	}
+
+		#mainSections ul {
+			float: left;
+			width: 480px;
+		}
+
+			#mainSections ul li a,
+			#mainSections ul li a:link,
+			#mainSections ul li a:visited {
+				float: left;
+				width: 25%;
+				height: 50px;
+				padding-top: 19px;
+				color: rgba(255,255,255,.9);
+			    -webkit-transition: all 0.2s linear;
+			       -moz-transition: all 0.2s linear;
+			        -ms-transition: all 0.2s linear;
+			         -o-transition: all 0.2s linear;
+			            transition: all 0.2s linear;
+			}
+			
+				#mainSections ul li a:hover,
+				#mainSections ul li a:focus {
+					color: rgba(255, 255, 255, 1);
+					background: rgba(255, 255, 255, 0.08);
+				}
+				
+				#mainSections ul li a:active {
+					background: rgba(0, 0, 0, 0.4);
+				}
+
+			#mainSections ul li#logo a,
+			#mainSections ul li#logo a:link,
+			#mainSections ul li#logo a:visited {
+			    padding-top: 10px;
+			    background-color: #0e6fa5; 
+			    background-image: url('images/logoBg.png') top left no-repeat; 
+			    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6ab0df), to(#0e6fa5));
+			    background-image: -webkit-linear-gradient(top, #6ab0df, #0e6fa5); 
+			    background-image:    -moz-linear-gradient(top, #6ab0df, #0e6fa5);
+			    background-image:     -ms-linear-gradient(top, #6ab0df, #0e6fa5);
+			    background-image:      -o-linear-gradient(top, #6ab0df, #0e6fa5);
+			    background-image:         linear-gradient(top, #6ab0df, #0e6fa5);
+			  	-webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+			       -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+			            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+			}
+
+				#mainSections ul li#logo a:hover,
+				#mainSections ul li#logo a:focus {
+					opacity: 0.9;
+				}																												
+				
+	/* Pages list */
+	#minorSections {
+	    float: right;
+	    font-size: 14px;
+	    line-height: 14px;
+	    text-align: center;	
+	}
+
+		#minorSections ul {
+			float: left;
+			width: 240px;
+		}
+		
+			#minorSections ul li a,
+			#minorSections ul li a:link,
+			#minorSections ul li a:visited {
+				float: left;
+				width: 50%;
+				height: 50px;
+				padding-top: 19px;
+				color: rgba(255, 255, 255, 0.4);
+				border-bottom: 1px solid transparent;
+			    -webkit-transition: all 0.2s linear;
+			       -moz-transition: all 0.2s linear;
+			         -o-transition: all 0.2s linear;
+			            transition: all 0.2s linear;
+			}
+
+				#minorSections ul li a:hover,
+				#minorSections ul li a:focus {
+					color: rgba(255, 255, 255, 1);
+					background: rgba(255, 255, 255, 0.08);
+				}
+				
+				#minorSections ul li a:active {
+					background: rgba(0,0,0,.4);
+				}
+		
+		/* Search form */
+		#minorSections #searchBar {
+		    float: right; 
+		    width: 120px;
+		    padding-top: 9px;
+		}
+
+			#minorSections #searchBar input[type='text'] {
+				float: left;
+			    font: italic 13px 'Futura Std Medium', Helvetica, sans-serif;
+			    line-height: 13px;
+			    color: rgba(255, 255, 255, 0.3);
+			    padding: 7px 6px 5px 30px;
+			    background: rgba(255, 255, 255, 0.09) url('images/searchBar.png') 6px -18px no-repeat;
+			    border: 1px solid rgba(0, 0, 0, 0.6);
+			    outline: 0;
+			    -webkit-border-radius: 6px;
+			       -moz-border-radius: 6px;
+			        -ms-border-radius: 6px;
+			         -o-border-radius: 6px;
+			            border-radius: 6px;
+			    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.1);
+				   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.1);
+				    -ms-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.1);
+				     -o-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.1);
+				        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255, 255, 255, 0.1);
+			    -webkit-transition: all 0.2s linear;
+			       -moz-transition: all 0.2s linear;
+			        -ms-transition: all 0.2s linear;
+			         -o-transition: all 0.2s linear;
+			            transition: all 0.2s linear;
+			}
+
+				#minorSections #searchBar input[type='text']:hover {
+					background-color: rgba(255, 255, 255, 0.15);
+				}
+				
+				#minorSections #searchBar input[type='text']:focus {
+				  color: rgba(0, 0, 0, 0.6);
+				  border: 1px solid rgba(0, 0, 0, 1);
+				  background: rgba(255, 255, 255, 1) url('images/searchBar.png') 6px 5px no-repeat;
+				  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.2);
+				     -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.2);
+				      -ms-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.2);
+				       -o-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.2);
+					      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.2);
+				}
+
+				#minorSections #searchBar input[type='text']::-webkit-input-placeholder {
+					padding-top: 2px;
+					font-style: italic;
+					color: #666;
+					text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+				}
+				
+				#minorSections #searchBar input[type='text']:focus::-webkit-input-placeholder {
+				    color: rgba(0, 0, 0, 0.3);
+				 	text-shadow: 0 0 0 transparent;
+				}
+
+
+/*
+  Footer
+**************************************************/
+
+/* General footer */
+footer {
+	padding: 50px 40px;
+	margin-top: 100px;
+	background: rgba(0, 0, 0, 0.4);
+    font: normal 14px 'Futura Std Heavy', Helvetica, sans-serif;
+    line-height: 26px;
+}
+
+	/* Footer titles */
+	footer h2 {
+		color: #fff;
+		font-size: 16px;
+		text-transform: uppercase;
+		padding-bottom: 20px;
+	}
+	
+	/* Footer lists and links */
+	footer .four {
+		float: left;
+		width: 240px;
+	}
+	
+		footer ul li a,
+		footer ul li a:link,
+		footer ul li a:visited {
+			color: rgba(255, 255, 255, 0.4);
+		    -webkit-transition: all 0.2s linear;
+		       -moz-transition: all 0.2s linear;
+		         -o-transition: all 0.2s linear;
+		            transition: all 0.2s linear;
+		}
+		
+			footer ul li a:hover,
+			footer ul li a:focus {
+				color: rgba(255, 255, 255, 1);
+			}
+	
+	/* Back to top */
+	#backTop a,
+	#backTop a:link,
+	#backTop a:visited {
+		float: right;
+		text-align: right;
+		padding-left: 36px;
+		background: url('images/backTop.png') top left no-repeat;
+		color: rgba(255, 255, 255, 0.4);
+	    -webkit-transition: all 0.2s linear;
+	       -moz-transition: all 0.2s linear;
+	        -ms-transition: all 0.2s linear;
+	         -o-transition: all 0.2s linear;
+	            transition: all 0.2s linear;
+	}
+	
+		#backTop a:hover,
+		#backTop a:focus {
+			color: rgba(255, 255, 255, 1);
+		}

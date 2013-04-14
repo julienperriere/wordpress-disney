@@ -1,21 +1,11 @@
-<!-- Header -->
-<?php get_header(); ?>
-
-	<!-- Get unique content -->
-	<section id="post-<?php the_ID(); ?>">
-
-		<?php the_post_thumbnail( 'thumbnail', array('class' => 'poster-thumb' )); ?>
-
-		<?php
-		    if(have_posts()) :
-		    	while(have_posts()) :
-		    		the_post();
-		    		the_title();
-		    		the_content();
-		    	endwhile;
-		    endif;
-		?>
-		
-	</section>
-
-<?php get_footer(); ?>
+<?php
+	if (in_category('2')) {
+		include (TEMPLATEPATH . '/single-film.php');
+	} elseif (in_category('4')) {
+		include (TEMPLATEPATH . '/single-jeunesse.php');
+	} elseif (in_category('3')) {
+		include (TEMPLATEPATH . '/single-serie.php');
+	} else {
+		include (TEMPLATEPATH . '/single-common.php');
+	}
+?>
